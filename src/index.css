@@ -1,3 +1,19 @@
+:root {
+  --green: rgb(38, 76, 89);
+  --light-green: rgb(172, 198, 201);
+  --light-grey: #f1f1f4;
+  --text-color-light: #f1f1f1;
+  --bg-color: #ccf9ff;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
@@ -5,9 +21,112 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  overflow: hidden;
+  background-color: var(--bg-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.color-switcher {
+  background-color: white;
+  position: fixed;
+  height: 200px;
+  width: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: -290px;
+  border-radius: 5%;
+
+
+}
+
+.heading {
+  font-size: 20px;
+  margin-bottom: 1.2rem;
+}
+
+.color-list {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+
+
+}
+
+.color-item {
+  width: 2rem;
+  height: 2rem;
+  border-radius: 50%;
+  background-color: var(--bg-color);
+  cursor: pointer;
+}
+
+
+/* ---------- nav styling ---------- */
+nav {
+  background-color: var(--green);
+  /* margin-top: 500px; */
+  width: 300px;
+  text-align: center;
+  overflow: hidden;
+
+
+
+}
+
+/* Style for links i nav bar */
+nav a {
+  display: inline-block;
+  color: var(--text-color-light);
+  text-align: center;
+  padding: 20px 17px;
+  text-decoration: none;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+nav p {
+  font-size: 25px;
+}
+
+/* Ændre farve for links ved hover */
+nav a:hover {
+  background-color: var(--light-grey);
+  color: var(--text-color-dark);
+}
+
+/* tilføj af farve for aktiv/nuværende link */
+nav a.active {
+  background-color: var(--light-green);
+  color: var(--green);
+}
+
+
+
+.reset-button {
+  background-color: transparent;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+  color: #666;
+}
+
+.content-container{
+  width: 50vw;
+  height: 50vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: column;
+}
+
+.mainContainer {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
